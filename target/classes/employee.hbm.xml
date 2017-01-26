@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.make.it.Employee" table="employee_table">
+		<id name="employeeCode" type="string">
+			<column name="employee_code" length="3" />
+			<generator class="assigned" />
+		</id>
+		<property name="employeeName" type="string">
+			<column name="employee_name" length="30" not-null="true" />
+		</property>
+		<property name="departmentName" type="string">
+			<column name="department_name" length="30" not-null="true" />
+		</property>
+		<property name="phoneNumber" type="string">
+			<column name="phone_number" length="10" not-null="true" />
+		</property>
+	</class>
+</hibernate-mapping>
